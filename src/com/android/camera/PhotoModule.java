@@ -1779,7 +1779,7 @@ public class PhotoModule extends BaseModule<PhotoUI> implements
 
         // We don't want user to press the button again while taking a
         // multi-second HDR photo. For longshot, no need to disable.
-        if (CameraUtil.SCENE_MODE_HDR.equals(mSceneMode)) {
+        if (mCameraState != LONGSHOT) {
             mUI.enableShutter(false);
         }
 
